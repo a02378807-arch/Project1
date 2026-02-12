@@ -1,1 +1,65 @@
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Banner spacing (optional but usually looks better) */
+img {
+  max-width: 100%;
+}
+
+/* NAV BAR */
+nav {
+  position: sticky; /* makes it "sticky" */
+  top: 0;
+  z-index: 1000; /* keeps it above other stuff */
+}
+
+/* Remove bullets + spacing */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: #333; /* nav background */
+  overflow: hidden;
+  border-bottom: 3px solid #222;
+}
+
+/* Make items horizontal */
+nav li {
+  float: left;
+}
+
+/* Link styling */
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Hover effect ONLY for non-active links */
+nav a:not(.active):hover {
+  background-color: #555;
+}
+
+/* Active page styling */
+nav a.active {
+  background-color: #0a7cff; /* active color */
+  font-weight: bold;
+}
+
+/* Keeps content from hiding behind sticky nav when you scroll (optional) */
+main {
+  padding: 16px;
+}
+
+/* Clear floats so the rest of the page behaves */
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
